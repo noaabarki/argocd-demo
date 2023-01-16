@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "git@github.com:noaabarki/mobx-barelato.git"
+    repoURL: "git@github.com:noaabarki/argocd-demo.git" # public repo, replace with your own
     targetRevision: HEAD
-    path: kube/
+    path: gitops/mobx-barkellato/
   destination:
     server: https://kubernetes.default.svc
     namespace: mobx-barkellato-app

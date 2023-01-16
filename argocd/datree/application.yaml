@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: datree-webhook
+  namespace: datree
+spec:
+  project: default
+  source:
+    repoURL: 'https://datreeio.github.io/admission-webhook-datree'
+    targetRevision: 0.3.30
+    helm:
+      parameters:
+        - name: datree.token
+          value: 62a8574c-643f-4127-a897-7f18a9023e6d
+    chart: datree-admission-webhook
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: datree
+  syncPolicy: {}
+
+
