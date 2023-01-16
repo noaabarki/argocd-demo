@@ -6,11 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "git@github.com:noaabarki/argocd-demo.git" # public repo, replace with your own
+    repoURL: https://github.com/noaabarki/argocd-demo.git # public repo, replace with your own
     targetRevision: HEAD
     path: gitops/mobx-barkellato/
   destination:
     server: https://kubernetes.default.svc
     namespace: mobx-barkellato-app
   syncPolicy:
-    automated: {}
+    automated:
+      prune: false
+      selfHeal: false
