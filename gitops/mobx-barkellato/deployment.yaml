@@ -32,6 +32,7 @@ spec:
       labels:
         app: mobx-barkellato
     spec:
+      securityContext: {}
       containers:
         - name: mobx-barkellato
           image: noaabarki/mobx-barkellato:v1.0.0
