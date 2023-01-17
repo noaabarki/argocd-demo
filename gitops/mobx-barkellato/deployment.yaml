@@ -55,7 +55,7 @@ metadata:
     app.kubernetes.io/version: "0.0.1"
     app.kubernetes.io/component: frontend
     app.kubernetes.io/part-of: mobx-barkellato-app
-    app.kubernetes.io/managed-by: Noaa
+    app.kubernetes.io/managed-by: Noaa Barki
 spec:
   type: NodePort
   ports:
